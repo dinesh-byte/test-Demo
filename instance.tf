@@ -5,7 +5,7 @@ resource "aws_instance" "public1" {
   instance_type               = var.instance_type
   subnet_id                   = aws_subnet.publicsubnet1.id
   security_groups             = [aws_security_group.pubSG.id]
-  user_data                   = file("user.tpl.sh")
+  #user_data                   = file("user.tpl.sh")
   associate_public_ip_address = true
  
   tags = {
@@ -20,7 +20,7 @@ resource "aws_instance" "public2" {
   instance_type               = var.instance_type
   subnet_id                   = aws_subnet.publicsubnet2.id
   security_groups             = [aws_security_group.pubSG.id]
-  user_data                   = file("user1.tpl.sh")
+  #user_data                   = file("user1.tpl.sh")
   associate_public_ip_address = true
   
   tags = {
